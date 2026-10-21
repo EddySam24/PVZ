@@ -1,0 +1,54 @@
+:root {
+  --green-dark: #1b5e20;
+  --green: #4a7c3a;
+  --grass: #9ccc65;
+  --grass-hover: #aed581;
+  --grass-border: #558b2f;
+  --sun: #fff3b0;
+  --bg: #57ff00;
+  --text: #1f3d1a;
+  --error: #b71c1c;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+}
+
+.app { padding: 20px; }
+.app h1 { margin: 0 0 12px; }
+
+.bar { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; margin-bottom: 12px; }
+
+.suns { font-size: 22px; font-weight: 700; background: var(--sun); padding: 8px 14px; border-radius: 10px; }
+
+.inventory { display: flex; gap: 8px; }
+.inv-btn {
+  padding: 10px 14px; font-size: 15px; cursor: pointer;
+  border: 2px solid var(--green); background: #fff; border-radius: 10px;
+}
+.inv-btn.selected { background: var(--green); color: #fff; }
+.inv-btn.poor { opacity: 0.55; }
+
+.new-game {
+  padding: 8px 14px; border: none; border-radius: 8px; cursor: pointer;
+  background: var(--green-dark); color: #fff;
+}
+
+.msg { min-height: 24px; font-weight: 600; }
+.msg.ok { color: var(--green-dark); }
+.msg.err { color: var(--error); }
+
+.board { display: grid; gap: 4px; margin: 12px 0; }
+.cell {
+  height: 90px; background: var(--grass); border: 2px solid var(--grass-border);
+  border-radius: 6px; cursor: pointer; font-size: 13px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.cell:hover { background: var(--grass-hover); }
+.cell small { color: #33521f; text-align: center; }
+.cell-icon { font-size: 30px; }
+
+.loading { padding: 20px; }
